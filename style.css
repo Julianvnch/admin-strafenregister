@@ -114,9 +114,14 @@ body {
     width: 100%;
 }
 
+#fineslist table {
+    border-spacing: 3px;
+}
+
 #finesHeader th {
     overflow: hidden;
     color: white;
+    font-size: 20px;
 }
 
 #fineslist table tr td {
@@ -238,7 +243,7 @@ body {
 
 .categoryHeader th {
     color: var(--buttonhover);
-    font-size: 18px;
+    font-size: 20px;
 }
 
 #resetButton {
@@ -266,4 +271,18 @@ body {
 
 #resetButton:hover {
     background-color: rgb(255, 44, 44);
+}
+
+
+
+.selected_extrawanted {
+    color: yellow;
+}
+
+.extrawanted {
+    transition: 0.1s all;
+}
+
+.extrawanted:hover {
+    color: yellow;
 }

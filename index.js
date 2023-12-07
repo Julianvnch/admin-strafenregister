@@ -17,6 +17,7 @@ function searchFine() {
 function selectFine(event) {
     let element = event.target
     console.log(element.tagName);
+    if (element.tagName == "FONT") return
     if (element.tagName == "TD") element = element.parentElement
     if (element.tagName == "I") element = element.parentElement.parentElement
 
@@ -49,8 +50,15 @@ function startCalculating() {
     let fineCollection = document.querySelectorAll(".selected")
     for (var i = 0; i < fineCollection.length; i++) {
         fineAmount = fineAmount + parseInt(fineCollection[i].querySelector(".fineAmount").getAttribute("data-fineamount"))
+        let extrawanteds_found = fineCollection[i].querySelector(".wantedAmount").querySelectorAll(".selected_extrawanted")
+        for (let b = 0; b < extrawanteds_found.length; b++) {
+            if (extrawanteds_found[b].getAttribute("data-addedfine")) fineAmount = fineAmount + parseInt(extrawanteds_found[b].getAttribute("data-addedfine"))
+            
+        }
 
         wantedAmount = wantedAmount + parseInt(fineCollection[i].querySelector(".wantedAmount").getAttribute("data-wantedamount"))
+        
+        wantedAmount = wantedAmount + fineCollection[i].querySelector(".wantedAmount").querySelectorAll(".selected_extrawanted").length
         if (wantedAmount > 5) wantedAmount = 5
         
 
@@ -154,4 +162,66 @@ function copyText(event) {
     navigator.clipboard.writeText(copyText);
 
     insertNotification("success", "Der Text wurde kopiert.", 5)
+}
+
+function toggleExtraWanted(event) {
+    let target = event.target
+    let extrastarNumber = 0
+    let isSelected = false
+    let isLead = false
+
+    if(target.classList.contains("extrawanted1")) extrastarNumber = 1
+    if(target.classList.contains("extrawanted2")) extrastarNumber = 2
+    if(target.classList.contains("extrawanted3")) extrastarNumber = 3
+    if(target.classList.contains("extrawanted4")) extrastarNumber = 4
+    if(target.classList.contains("extrawanted5")) extrastarNumber = 5
+
+
+    if (target.classList.contains("selected_extrawanted")) isSelected = true
+
+    if (isSelected && target.parentElement.querySelectorAll(".selected_extrawanted").length == extrastarNumber) isLead = true
+
+    if (isSelected && isLead) {
+
+
+        let foundEnabled = target.parentElement.querySelectorAll(".selected_extrawanted")
+        for (let i = 0; i < foundEnabled.length; i++) {
+            foundEnabled[i].classList.remove("selected_extrawanted")
+            
+        }
+
+        startCalculating()
+        return
+    }
+
+    if (isSelected) {
+
+        console.log("D");
+
+        let found = target.parentElement.querySelectorAll(".extrawanted")
+        for (let i = 0; i < found.length; i++) {
+            console.log(i, extrastarNumber);
+            if (i + 1 > extrastarNumber) {
+
+                found[i].classList.remove("selected_extrawanted")
+            }
+            
+        }
+
+        startCalculating()
+        return
+    }
+
+    if (!isSelected) {
+        let found = target.parentElement.querySelectorAll(".extrawanted")
+        for (let i = 0; i < extrastarNumber; i++) {
+            found[i].classList.add("selected_extrawanted")
+            
+        }
+    }
+
+    startCalculating()
+    //for (let index = 0; index < extrastarNumber; index++) {
+    //    const element = array[index];    
+    //}
 }
