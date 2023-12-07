@@ -1,0 +1,242 @@
+:root {
+    --textprim: #bababa;
+    --textsecond: #ffffff;
+    --button: #2b2b2b;
+    --accent: #525600;
+    --buttonhover: #6565ff;
+    --background: #1d1d1d;
+    --inputs: #121212;
+}
+
+
+* {
+    font-family: ProximaNova, sans-serif;
+    color: var(--textprim);
+}
+
+html {  height: 100%; }
+
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    background-color: var(--background);
+
+    user-select: none;
+}
+
+#header {
+    width: 100%;
+    height: 5%;
+
+    background-color: var(--inputs);
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    display: grid;
+    grid-template-columns: 33.333% 33.333% 33.333%;
+}
+
+#title {
+    line-height: 5vh;
+
+    padding-left: 20px;
+    font-size: 3vh;
+    font-weight: 600;
+    color: var(--textsecond);
+}
+
+#credits {
+    text-align: center;
+    line-height: 5vh;
+}
+
+#searchbar input {
+    float: right;
+    width: 70%;
+    height: 3vh;
+    background-color: var(--background);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5vh;
+
+    margin-top: 1vh;
+    margin-right: 2vw;
+
+    tab-size: 0px;
+    outline: none;
+    box-sizing: border-box;
+    font-weight: 500;
+    color: white;
+
+    text-indent: 5px;
+}
+
+#contentbox {
+    width: 100%;
+    height: 93%;
+
+    position: absolute;
+    bottom: 0;
+
+    background-color: var(--inputs);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+
+#fineslist {
+    background-color: var(--background);
+    border-radius: 20px;
+    margin: 1vh;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+#fineslist::-webkit-scrollbar {
+    display: none;
+}
+
+#results {
+    background-color: var(--background);
+    border-radius: 20px;
+    margin: 1vh;
+    margin-left: 0;
+}
+
+#fineslist table {
+    overflow: hidden;
+
+    margin-top: 2%;
+
+    width: 100%;
+}
+
+#finesHeader th {
+    overflow: hidden;
+    color: white;
+}
+
+#fineslist table tr td {
+    text-align: center;
+
+    transition: all 0.3s;
+}
+
+.fine {
+    transition: all 0.3s;
+}
+
+.showing {
+    background: var(--inputs);
+}
+
+.hiding {
+    display: none;
+} 
+
+.selected {
+    background-color: var(--accent);
+    
+}
+
+.selected td {
+    color: white;
+}
+
+#resultsTitle {
+    width: 100%;
+    font-size: 3vh;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    margin-top: 5px;
+}
+
+#infoTitle {
+    width: 90%;
+    position: relative;
+    left: 5%;
+}
+
+#plateInput {
+    width: 90%;
+    position: relative;
+    left: 5%;
+}
+
+#systemwantedsInput {
+    width: 90%;
+    position: relative;
+    left: 5%;
+}
+
+.result {
+    width: 90%;
+    position: relative;
+    left: 5%;
+}
+
+#plateInput_input {
+    width: 70%;
+    height: 3vh;
+    background-color: var(--inputs);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5vh;
+
+    margin-top: 1vh;
+
+    tab-size: 0px;
+    outline: none;
+    box-sizing: border-box;
+    font-weight: 500;
+    color: white;
+
+    text-indent: 5px;
+}
+
+#systemwantedsInput_input {
+    width: 70%;
+    height: 3vh;
+    background-color: var(--inputs);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5vh;
+
+    margin-top: 1vh;
+
+    tab-size: 0px;
+    outline: none;
+    box-sizing: border-box;
+    font-weight: 500;
+    color: white;
+
+    text-indent: 5px;
+}
+
+#übergabeInput_input {
+    width: 70%;
+    height: 3vh;
+    background-color: var(--inputs);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5vh;
+
+    margin-top: 1vh;
+
+    tab-size: 0px;
+    outline: none;
+    box-sizing: border-box;
+    font-weight: 500;
+    color: white;
+
+    text-indent: 5px;
+}
+
+.categoryHeader th {
+    color: var(--buttonhover);
+    font-size: 18px;
+}
