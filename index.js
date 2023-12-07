@@ -110,3 +110,25 @@ function startCalculating() {
     wantedResult.innerHTML = `<b>Wanteds:</b> <font style="user-select: all;">${wantedAmount}</font>`
     reasonResult.innerHTML = `<b>Grund:</b> <font style="user-select: all;">${reasonText}</font>`
 }
+
+
+
+window.onload = () => {
+    console.log("onload");
+    let savedBody;
+    let alreadyBig = true
+    savedBody = document.body.innerHTML
+    setInterval(() => {
+        if (document.body.clientWidth < 750) {
+            alreadyBig = false
+            document.body.innerHTML = `
+            <div style="transform: translate(-50%, -50%); font-weight: 600; font-size: 8vw; color: white; width: 80%; position: relative; left: 50%; top: 50%; text-align: center;">Diese Website kann nur auf einem PC angesehen werden<div>
+            `
+            document.body.style.backgroundColor = "#121212"
+        } else if (alreadyBig == false) {
+            alreadyBig = true
+            document.body.innerHTML = savedBody;
+            document.body.style.backgroundColor = "";
+        }
+    }, 100)
+}
