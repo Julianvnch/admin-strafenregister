@@ -85,7 +85,7 @@ function startCalculating() {
     }
 
     if (plate != "") {
-        reasonText += ` + ${plate.toLocaleUpperCase()}`
+        reasonText += ` - ${plate.toLocaleUpperCase()}`
     }
 
     if (systemwanteds != "") {
@@ -108,7 +108,7 @@ function startCalculating() {
     infoResult.innerHTML = `<b>Information:</b> ${noticeText}`
     fineResult.innerHTML = `<b>Geldstrafe:</b> <font style="user-select: all;">$${fineAmount}</font>`
     wantedResult.innerHTML = `<b>Wanteds:</b> <font style="user-select: all;">${wantedAmount}</font>`
-    reasonResult.innerHTML = `<b>Grund:</b> <font style="user-select: all;">${reasonText}</font>`
+    reasonResult.innerHTML = `<b>Grund:</b> <font style="user-select: all;" onclick="JavaScript:copyText(event)">${reasonText}</font>`
 }
 
 
@@ -131,4 +131,27 @@ window.onload = () => {
             document.body.style.backgroundColor = "";
         }
     }, 100)
+}
+
+function resetButton() {
+    let fineCollection = document.querySelectorAll(".selected")
+    for (var i = 0; i < fineCollection.length; i++) {
+        fineCollection[i].classList.remove("selected")
+    }
+
+    document.getElementById("plateInput_input").value = ""
+    document.getElementById("systemwantedsInput_input").value = ""
+
+    startCalculating()
+}
+
+function copyText(event) {
+    let target = event.target
+    // Get the text field
+    var copyText = target.innerHTML
+  
+    // Copy the text inside the text field
+    navigator.clipboard.writeText(copyText);
+
+    insertNotification("success", "Der Text wurde kopiert.", 5)
 }

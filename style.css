@@ -240,3 +240,30 @@ body {
     color: var(--buttonhover);
     font-size: 18px;
 }
+
+#resetButton {
+    width: 70%;
+    height: 4vh;
+    background-color: var(--inputs);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5vh;
+
+    margin-top: 3vh;
+
+    tab-size: 0px;
+    outline: none;
+    box-sizing: border-box;
+    font-weight: 500;
+    color: white;
+
+    transition: all 0.3s;
+
+    position: relative;
+    left: 5%;
+
+}
+
+#resetButton:hover {
+    background-color: rgb(255, 44, 44);
+}
