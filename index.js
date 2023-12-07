@@ -159,7 +159,7 @@ function copyText(event) {
     var copyText = target.innerHTML
   
     // Copy the text inside the text field
-    navigator.clipboard.writeText(copyText);
+    navigator.clipboard.writeText(copyText.replace("<br>", ""));
 
     insertNotification("success", "Der Text wurde kopiert.", 5)
 }
