@@ -719,10 +719,21 @@
                 <input id="übergabeInput_input" type="text" oninput="JavaScript:startCalculating()" placeholder="TV-Abtransport Beauftrager">
             </div>
 
+            <button id="showButton" onclick="JavaScript:showFines()">Bußgelder anzeigen</button>
+
             <button id="resetButton" onclick="JavaScript:resetButton()">Zurücksetzen</button>
         </div>
 
-        
+        <div id="finesListContainer" style="pointer-events: none;">
+            <div id="finesListContainer_title">Auflistung der zu vergebenen Geldstrafen</div>
+            <table id="finesListTable">
+                <tr>
+                    <th style="width: 80%;">Grund für die Geldstrafe</th>
+                    <th style="width: 20%;">Bußgeld</th>
+                </tr>
+
+            </table>
+        </div>
 
         <div id="standartNotifications">
         </div>

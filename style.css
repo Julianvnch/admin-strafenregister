@@ -235,7 +235,7 @@ body {
     border-radius: 5px;
     font-size: 1.5vh;
 
-    margin-top: 3vh;
+    margin-top: 1.5vh;
 
     tab-size: 0px;
     outline: none;
@@ -248,6 +248,33 @@ body {
     position: relative;
     left: 5%;
 
+}
+
+#showButton {
+    width: 70%;
+    height: 4vh;
+    background-color: var(--inputs);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5vh;
+
+    margin-top: 1.5vh;
+
+    tab-size: 0px;
+    outline: none;
+    box-sizing: border-box;
+    font-weight: 500;
+    color: white;
+
+    transition: all 0.3s;
+
+    position: relative;
+    left: 5%;
+
+}
+
+#showButton:hover {
+    background-color: rgb(107, 232, 96);
 }
 
 #resetButton:hover {
@@ -388,4 +415,64 @@ select {
     color: white;
 
     text-indent: 5px;
+}
+
+
+
+#finesListContainer {
+    width: 50%;
+    height: 50%;
+
+    position: fixed;
+    z-index: 2;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+
+    background-color: var(--background);
+    box-shadow: 0px 0px 10px black;
+
+    border-radius: 16px;
+
+    overflow-y: scroll;
+
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#fineListContainer[data-showing="true"] {
+    opacity: 1;
+}
+
+#finesListContainer::-webkit-scrollbar {
+    display: none;
+}
+
+#finesListContainer_title {
+    width: 100%;
+    color: white;
+    text-align: center;
+
+    padding-top: 5px;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+#finesListContainer table {
+    position: relative;
+    width: 95%;
+    margin-top: 10px;
+    left: 2.5%;
+    border-spacing: 3px;
+
+    color: white;
+    text-align: center;
+}
+
+#finesListContainer table tr th {
+    color: white;
+}
+
+.finesList_fine {
+    background-color: var(--inputs);
 }

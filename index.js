@@ -31,6 +31,12 @@ function selectFine(event) {
 }
 
 function startCalculating() {
+
+    document.getElementById("finesListTable").innerHTML = `<tr>
+                    <th style="width: 80%;">Grund für die Geldstrafe</th>
+                    <th style="width: 20%;">Bußgeld</th>
+                </tr>`
+
     let fineResult = document.getElementById("fineResult")
     let fineAmount = 0
 
@@ -57,9 +63,10 @@ function startCalculating() {
     for (var i = 0; i < fineCollection.length; i++) {
         fineAmount = fineAmount + parseInt(fineCollection[i].querySelector(".fineAmount").getAttribute("data-fineamount"))
         let extrawanteds_found = fineCollection[i].querySelector(".wantedAmount").querySelectorAll(".selected_extrawanted")
+        let extrafines_amount = 0
         for (let b = 0; b < extrawanteds_found.length; b++) {
             if (extrawanteds_found[b].getAttribute("data-addedfine")) fineAmount = fineAmount + parseInt(extrawanteds_found[b].getAttribute("data-addedfine"))
-            
+            extrafines_amount = extrafines_amount + parseInt(extrawanteds_found[b].getAttribute("data-addedfine"))
         }
 
         wantedAmount = wantedAmount + parseInt(fineCollection[i].querySelector(".wantedAmount").getAttribute("data-wantedamount"))
@@ -104,6 +111,17 @@ function startCalculating() {
 
         if (fineCollection[i].getAttribute("data-removedriverlicence") == "true") removeDriverLicense = true
         if (fineCollection[i].getAttribute("data-removeweaponlicence") == "true") removeWeaponLicense = true
+
+        
+
+        document.getElementById("finesListTable").innerHTML +=
+        `
+        <tr class="finesList_fine">
+            <td onclick="JavaScript:copyText(event)">${day}.${month} ${hour}:${minute} - ${fineCollection[i].querySelector(".paragraph").innerHTML} - ${fineText}</td>
+            <td>$${parseInt(fineCollection[i].querySelector(".fineAmount").getAttribute("data-fineamount")) + extrafines_amount}</td>
+        </tr>
+        `
+
     }
 
     if (plate != "") {
@@ -137,6 +155,20 @@ function startCalculating() {
     reasonResult.innerHTML = `<b>Grund:</b> <font style="user-select: all;" onclick="JavaScript:copyText(event)">${reasonText}</font>`
 }
 
+
+function showFines() {
+    console.log("CLICKED");
+    console.log(document.getElementById("finesListContainer").style.opacity);
+    if (document.getElementById("finesListContainer").style.opacity == 0) {
+        console.log("SHOW");
+        document.getElementById("finesListContainer").style.opacity = 1
+        document.getElementById("finesListContainer").style.pointerEvents = ""
+    } else {
+        console.log("HIDE");
+        document.getElementById("finesListContainer").style.opacity = 0
+        document.getElementById("finesListContainer").style.pointerEvents = "none"
+    }
+} 
 
 
 window.onload = () => {
