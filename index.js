@@ -114,13 +114,24 @@ function startCalculating() {
 
         
 
-        document.getElementById("finesListTable").innerHTML +=
-        `
-        <tr class="finesList_fine">
-            <td onclick="JavaScript:copyText(event)">${day}.${month} ${hour}:${minute} - ${fineCollection[i].querySelector(".paragraph").innerHTML} - ${fineText}</td>
-            <td>$${parseInt(fineCollection[i].querySelector(".fineAmount").getAttribute("data-fineamount")) + extrafines_amount}</td>
-        </tr>
-        `
+        if (fineCollection[i].classList.contains("addPlateInList") && plate !== "") {
+
+            document.getElementById("finesListTable").innerHTML +=
+            `
+            <tr class="finesList_fine">
+                <td onclick="JavaScript:copyText(event)">${day}.${month} ${hour}:${minute} - ${fineCollection[i].querySelector(".paragraph").innerHTML} - ${fineText} - ${plate}</td>
+                <td>$${parseInt(fineCollection[i].querySelector(".fineAmount").getAttribute("data-fineamount")) + extrafines_amount}</td>
+            </tr>
+            `
+        } else {
+            document.getElementById("finesListTable").innerHTML +=
+            `
+            <tr class="finesList_fine">
+                <td onclick="JavaScript:copyText(event)">${day}.${month} ${hour}:${minute} - ${fineCollection[i].querySelector(".paragraph").innerHTML} - ${fineText}</td>
+                <td>$${parseInt(fineCollection[i].querySelector(".fineAmount").getAttribute("data-fineamount")) + extrafines_amount}</td>
+            </tr>
+            `
+        }
 
     }
 
