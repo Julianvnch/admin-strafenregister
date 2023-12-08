@@ -699,22 +699,30 @@
             <div class="result" id="reasonResult"><b>Grund:</b></div>
             <div class="result" id="infoResult"><b>Information:</b></div>
 
+            <div id="checkbox">
+                <input id="checkbox_box" onchange="JavaScript:startCalculating()" type="checkbox" name="">
+                <label for="checkbox_box">Kurzer Grund</label>
+            </div>
+
             <div id="plateInput"><input id="plateInput_input" type="text" maxlength="8" placeholder="Kennzeichen" oninput="JavaScript:startCalculating()"></div>
             <div id="systemwantedsInput"><input id="systemwantedsInput_input" type="text" maxlength="1" placeholder="Systemwanteds" oninput="JavaScript:startCalculating()"></div>
-            <!--<div id="übergabeInput">
-                <select name="" id="übergabeInput_select">
-                    <option value="none">Nicht ausgewählt</option>
-                    <option value="lspd">LSPD</option>
-                    <option value="sahp">SAHP</option>
-                    <option value="ng">NG</option>
-                    <option value="usss">USSS</option>
-                    <option value="fib">FIB</option>
+            
+            <div id="übergabeInput">
+                <select name="" id="übergabeInput_select" onchange="JavaScript:startCalculating()">
+                    <option value="none">TV-Abtransport auswählen</option>
+                    <option value="lspd">Los Santos Police Department</option>
+                    <option value="sahp">San Andreas Highway Patrol</option>
+                    <option value="ng">National Guard</option>
+                    <option value="usss">United States Secret Service</option>
+                    <option value="fib">Federal Investigation Bureau</option>
                 </select>
-                <input id="übergabeInput_input" type="text" placeholder="TV-Abtransport Beauftrager">
-            </div>-->
+                <input id="übergabeInput_input" type="text" oninput="JavaScript:startCalculating()" placeholder="TV-Abtransport Beauftrager">
+            </div>
 
             <button id="resetButton" onclick="JavaScript:resetButton()">Zurücksetzen</button>
         </div>
+
+        
 
         <div id="standartNotifications">
         </div>

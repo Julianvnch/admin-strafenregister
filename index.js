@@ -47,6 +47,12 @@ function startCalculating() {
     let removeWeaponLicense = false
     let removeDriverLicense = false
 
+    let tvübergabe_org = document.getElementById("übergabeInput_select").value
+    let tvübergabe_name = document.getElementById("übergabeInput_input").value
+
+    let shortMode = false
+    if (document.getElementById("checkbox_box").checked) shortMode = true
+
     let fineCollection = document.querySelectorAll(".selected")
     for (var i = 0; i < fineCollection.length; i++) {
         fineAmount = fineAmount + parseInt(fineCollection[i].querySelector(".fineAmount").getAttribute("data-fineamount"))
@@ -82,10 +88,18 @@ function startCalculating() {
             fineText = fineCollection[i].querySelector(".fineText").innerHTML
         }
 
-        if (reasonText == "") {
-            reasonText = `${day}.${month} ${hour}:${minute} - ${fineCollection[i].querySelector(".paragraph").innerHTML} - ${fineText}`
+        if (shortMode) {
+            if (reasonText == "") {
+                reasonText = `${day}.${month} ${hour}:${minute} - ${fineCollection[i].querySelector(".paragraph").innerHTML}`
+            } else {
+                reasonText += ` + ${fineCollection[i].querySelector(".paragraph").innerHTML}`
+            }
         } else {
-            reasonText += ` + ${day}.${month} ${hour}:${minute} - ${fineCollection[i].querySelector(".paragraph").innerHTML} - ${fineText}`
+            if (reasonText == "") {
+                reasonText = `${day}.${month} ${hour}:${minute} - ${fineCollection[i].querySelector(".paragraph").innerHTML} - ${fineText}`
+            } else {
+                reasonText += ` + ${day}.${month} ${hour}:${minute} - ${fineCollection[i].querySelector(".paragraph").innerHTML} - ${fineText}`
+            }
         }
 
         if (fineCollection[i].getAttribute("data-removedriverlicence") == "true") removeDriverLicense = true
@@ -110,6 +124,10 @@ function startCalculating() {
         } else {
             noticeText = noticeText + " + Waffenschein entziehen"
         }
+    }
+
+    if (tvübergabe_org !== "none" && tvübergabe_name !== "") {
+        reasonText += ` - @${tvübergabe_org.toLocaleUpperCase()} ${tvübergabe_name}`
     }
 
 
@@ -138,7 +156,7 @@ window.onload = () => {
             document.body.innerHTML = savedBody;
             document.body.style.backgroundColor = "";
         }
-    }, 100)
+    }, 1)
 }
 
 function resetButton() {
@@ -149,6 +167,11 @@ function resetButton() {
 
     document.getElementById("plateInput_input").value = ""
     document.getElementById("systemwantedsInput_input").value = ""
+
+    document.getElementById("übergabeInput_select").value = "none"
+    document.getElementById("übergabeInput_input").value = ""
+
+    document.getElementById("checkbox_box").removeAttribute("checked")
 
     startCalculating()
 }
