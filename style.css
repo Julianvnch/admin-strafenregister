@@ -172,6 +172,12 @@ body {
     left: 5%;
 }
 
+#blitzerInput {
+    width: 90%;
+    position: relative;
+    left: 5%;
+}
+
 #systemwantedsInput {
     width: 90%;
     position: relative;
@@ -185,6 +191,25 @@ body {
 }
 
 #plateInput_input {
+    width: 70%;
+    height: 3vh;
+    background-color: var(--inputs);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5vh;
+
+    margin-top: 1vh;
+
+    tab-size: 0px;
+    outline: none;
+    box-sizing: border-box;
+    font-weight: 500;
+    color: white;
+
+    text-indent: 5px;
+}
+
+#blitzerInput_input {
     width: 70%;
     height: 3vh;
     background-color: var(--inputs);
