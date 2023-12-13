@@ -98,7 +98,7 @@ function startCalculating() {
 
         if (shortMode) {
             if (reasonText == "") {
-                reasonText = `${day}.${month} ${hour}:${minute} - ${fineCollection[i].querySelector(".paragraph").innerHTML}`
+                reasonText = `${day}.${month} ${hour}:${minute} - ${fineCollection[i].querySelector(".paragraph").hasAttribute("data-paragraphAddition") ? fineCollection[i].querySelector(".paragraph").getAttribute("data-paragraphAddition") + " " : ""}${fineCollection[i].querySelector(".paragraph").innerHTML}`
             } else {
                 reasonText += ` + ${fineCollection[i].querySelector(".paragraph").innerHTML}`
             }
