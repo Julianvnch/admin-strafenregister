@@ -228,9 +228,8 @@ function resetButton() {
 
     document.getElementById("übergabeInput_select").value = "none"
     document.getElementById("übergabeInput_input").value = ""
-
-    document.getElementById("checkbox_box").removeAttribute("checked")
-    document.getElementById("reue_box").removeAttribute("checked")
+    
+    document.getElementById("reue_box").checked = false
 
     startCalculating()
 }
