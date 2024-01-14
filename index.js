@@ -74,14 +74,6 @@ function startCalculating() {
         
         wantedAmount = wantedAmount + fineCollection[i].querySelector(".wantedAmount").querySelectorAll(".selected_extrawanted").length
         if (wantedAmount > 5) wantedAmount = 5
-
-        if (document.getElementById("reue_box").checked) { // Means "reue" is active
-            if (wantedAmount > 2) { 
-                wantedAmount = wantedAmount - 2
-            } else if (wantedAmount == 2) {
-                wantedAmount = 1
-            }
-        }
         
 
         let now = new Date();
@@ -142,6 +134,11 @@ function startCalculating() {
             `
         }
 
+    }
+
+    if (document.getElementById("reue_box").checked) { // Means "reue" is active
+        wantedAmount = wantedAmount - 2
+        if (wantedAmount < 1) wantedAmount = 1
     }
 
     if (plate != "") {
