@@ -74,6 +74,14 @@ function startCalculating() {
         
         wantedAmount = wantedAmount + fineCollection[i].querySelector(".wantedAmount").querySelectorAll(".selected_extrawanted").length
         if (wantedAmount > 5) wantedAmount = 5
+
+        if (document.getElementById("reue_box").checked) { // Means "reue" is active
+            if (wantedAmount > 2) { 
+                wantedAmount = wantedAmount - 2
+            } else if (wantedAmount == 2) {
+                wantedAmount = 1
+            }
+        }
         
 
         let now = new Date();
@@ -142,6 +150,10 @@ function startCalculating() {
 
     if (blitzerort != "") {
         reasonText += ` - ${blitzerort}`
+    }
+
+    if (document.getElementById("reue_box").checked) {
+        reasonText += ` - Reue`
     }
 
     if (systemwanteds != "") {
@@ -221,6 +233,7 @@ function resetButton() {
     document.getElementById("übergabeInput_input").value = ""
 
     document.getElementById("checkbox_box").removeAttribute("checked")
+    document.getElementById("reue_box").removeAttribute("checked")
 
     startCalculating()
 }

@@ -343,12 +343,19 @@ body {
 
     color: white;
     font-weight: 600;
-    line-height: 25px;
 
     
     padding-left: 50px;
     position: relative;
     margin-top: -20px;
+}
+
+#checkboxfont1 {
+    font-family: sans-serif;
+    font-size: 16px;
+
+    color: white;
+    font-weight: 600;
 }
 
 [type="checkbox"] + label:before {
@@ -419,6 +426,15 @@ body {
     color: white;
 
     text-indent: 5px;
+}
+
+#reue {
+    position: relative;
+    left: 5%;
+    width: 90%;
+    margin-top: 1vh;
+    margin-bottom: 0.5vh;
+    
 }
 
 select {

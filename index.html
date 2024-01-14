@@ -713,7 +713,7 @@
 
             <div id="checkbox">
                 <input id="checkbox_box" onchange="JavaScript:startCalculating()" type="checkbox" name="">
-                <label for="checkbox_box">Kurzer Grund</label>
+                <label style="line-height: 25px;" for="checkbox_box">Kurzer Grund</label>
             </div>
 
             <div id="plateInput"><input id="plateInput_input" type="text" maxlength="8" placeholder="Kennzeichen" oninput="JavaScript:startCalculating()"></div>
@@ -730,6 +730,11 @@
                     <option value="fib">Federal Investigation Bureau</option>
                 </select>
                 <input id="übergabeInput_input" type="text" oninput="JavaScript:startCalculating()" placeholder="TV-Abtransport Beauftrager">
+            </div>
+
+            <div id="reue">
+                <input id="reue_box" onchange="JavaScript:startCalculating()" type="checkbox" name="">
+                <label for="reue_box"><font id="checkboxfont1" style="line-height: 25px;">Reue</font><br><font style="font-size: 15px; font-weight: 400;">(Entfernt 2 Wanteds, 1 Wanted muss verbleiben gemäß StBG §35 - Reue)</font></label>
             </div>
 
             <button id="showButton" onclick="JavaScript:showFines()">Bußgelder anzeigen</button>
