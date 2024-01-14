@@ -136,7 +136,7 @@ function startCalculating() {
 
     }
 
-    if (document.getElementById("reue_box").checked) { // Means "reue" is active
+    if (document.getElementById("reue_box").checked && wantedAmount !== 0) { // Means "reue" is active
         wantedAmount = wantedAmount - 2
         if (wantedAmount < 1) wantedAmount = 1
     }
