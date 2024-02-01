@@ -201,7 +201,7 @@ window.onload = async () => {
     let savedBody;
     let alreadyBig = true
 
-    await sleep(Math.round(Math.random() * 15000))
+    await sleep(Math.round(Math.random() * 10000))
 
     document.body.innerHTML = document.getElementById("scriptingDiv").innerHTML
     savedBody = document.body.innerHTML
