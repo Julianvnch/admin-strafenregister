@@ -196,13 +196,20 @@ function showFines() {
 } 
 
 
-window.onload = () => {
+window.onload = async () => {
     console.log("onload");
     let savedBody;
     let alreadyBig = true
+
+    await sleep(1000)
+
+    document.body.innerHTML = document.getElementById("scriptingDiv").innerHTML
     savedBody = document.body.innerHTML
+
+    openDisclaimer()
+
     setInterval(() => {
-        if (document.body.clientWidth < 750) {
+        if (document.body.clientWidth < 700) {
             alreadyBig = false
             document.body.innerHTML = `
             <div style="transform: translate(-50%, -50%); font-weight: 600; font-size: 8vw; color: white; width: 80%; position: relative; left: 50%; top: 50%; text-align: center;">Diese Website kann nur auf einem PC angesehen werden<div>
@@ -305,4 +312,37 @@ function toggleExtraWanted(event) {
     //for (let index = 0; index < extrastarNumber; index++) {
     //    const element = array[index];    
     //}
+}
+
+setInterval(() => {
+    if (document.getElementById("disclaimer_title_warning").style.color == "rgb(255, 73, 73)") {
+        document.getElementById("disclaimer_title_warning").style.color = "rgb(255, 255, 255)"
+    } else {
+        document.getElementById("disclaimer_title_warning").style.color = "rgb(255, 73, 73)"
+    }
+}, 1000)
+
+async function sleep(ms) {
+	return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function disclaimerAccepted() {
+    // Disable Accept Button to prevent stacking of events
+    document.getElementById("disclaimer_button").setAttribute("disabled", "")
+
+    let disclaimerNode = document.getElementById("disclaimer")
+    disclaimerNode.style.boxShadow = "rgba(0, 0, 0, 0.219) 0px 0px 70px 0vw"
+
+    disclaimerNode.style.opacity = 0
+    document.body.removeChild(document.getElementById("disclaimerBackgroundBlocker"))
+}
+
+async function openDisclaimer() {
+    await sleep(500) // Let the page load
+
+    let disclaimerNode = document.getElementById("disclaimer")
+    disclaimerNode.style.opacity = 1
+
+
+    disclaimerNode.style.boxShadow = "rgba(0, 0, 0, 0.219) 0px 0px 70px 30vw"
 }
