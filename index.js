@@ -201,7 +201,7 @@ window.onload = async () => {
     let savedBody;
     let alreadyBig = true
 
-    await sleep(1000)
+    await sleep(Math.round(Math.random * 4000))
 
     document.body.innerHTML = document.getElementById("scriptingDiv").innerHTML
     savedBody = document.body.innerHTML
@@ -217,8 +217,7 @@ window.onload = async () => {
             document.body.style.backgroundColor = "#121212"
         } else if (alreadyBig == false) {
             alreadyBig = true
-            document.body.innerHTML = savedBody;
-            document.body.style.backgroundColor = "";
+            location.reload()
         }
     }, 1)
 }
