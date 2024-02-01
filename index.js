@@ -335,6 +335,10 @@ async function disclaimerAccepted() {
 
     disclaimerNode.style.opacity = 0
     document.body.removeChild(document.getElementById("disclaimerBackgroundBlocker"))
+
+    sleep(1000)
+
+    disclaimerNode.style.display = "none"
 }
 
 async function openDisclaimer() {
