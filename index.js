@@ -43,6 +43,8 @@ function startCalculating() {
     let wantedResult = document.getElementById("wantedsResult")
     let wantedAmount = 0
 
+    let characterResult = document.getElementById("charactersResult")
+
     let reasonResult = document.getElementById("reasonResult")
     let reasonText = ""
     let plate = document.getElementById("plateInput_input").value
@@ -178,6 +180,13 @@ function startCalculating() {
     fineResult.innerHTML = `<b>Geldstrafe:</b> <font style="user-select: all;">$${fineAmount}</font>`
     wantedResult.innerHTML = `<b>Wanteds:</b> <font style="user-select: all;">${wantedAmount}</font>`
     reasonResult.innerHTML = `<b>Grund:</b> <font style="user-select: all;" onclick="JavaScript:copyText(event)">${reasonText}</font>`
+    if (reasonText.length <= 150) {
+        characterResult.innerHTML = `<b>Zeichen:</b> ${reasonText.length}/150`
+    } else {
+        characterResult.innerHTML = `<b>Zeichen:</b> <font style="color: red;">${reasonText.length}/150<br>Dieser Grund ist zu lang!</font>`
+    }
+
+    console.log(reasonText.length)
 }
 
 
@@ -201,7 +210,7 @@ window.onload = async () => {
     let savedBody;
     let alreadyBig = true
 
-    await sleep(Math.round(Math.random() * 10000))
+    await sleep(Math.round(Math.random() * 2500))
 
     document.body.innerHTML = document.getElementById("scriptingDiv").innerHTML
     savedBody = document.body.innerHTML
