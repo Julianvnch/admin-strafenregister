@@ -99,11 +99,21 @@ body {
     display: none;
 }
 
+#results::-webkit-scrollbar {
+    display: none;
+}
+
+
 #results {
     background-color: var(--background);
     border-radius: 20px;
     margin: 1vh;
     margin-left: 0;
+
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    padding-bottom: 30px;
 }
 
 #fineslist table {
@@ -428,6 +438,59 @@ body {
     text-indent: 5px;
 }
 
+/* ===== Scrollbar CSS ===== */
+  /* Firefox */
+  #notepadArea textarea {
+    scrollbar-width: auto;
+    scrollbar-color: #ffdd00 #ffffff00;
+  }
+
+  /* Chrome, Edge, and Safari */
+  #notepadArea textarea::-webkit-scrollbar {
+    width: 3px;
+  }
+
+  #notepadArea textarea::-webkit-scrollbar-track {
+    background: #ffffff00;
+  }
+
+  #notepadArea textarea::-webkit-scrollbar-thumb {
+    background-color: #ffdd00;
+    border-radius: 10px;
+    border: 1px solid #ffffff00;
+  }
+
+#notepadArea {
+    width: 90%;
+    position: relative;
+    left: 5%;
+
+    max-height: 250px;
+}
+
+#notepadArea textarea {
+    width: 70%;
+    background-color: var(--inputs);
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5vh;
+    margin-top: 1vh;
+
+    min-height: 2.5vh;
+    max-width: 90%;
+    min-width: 100px;
+    max-height: 240px;
+
+    tab-size: 0px;
+    outline: none;
+    box-sizing: border-box;
+    font-weight: 500;
+    color: white;
+
+    padding-left: 5px;
+
+}
+
 #reue {
     position: relative;
     left: 5%;
@@ -554,14 +617,12 @@ select {
 
 #disclaimer_button {
     border: none;
-    height: 4vh;
+
     background-color: rgb(255, 72, 72);
     color: white;
     font-size: 1vw;
     border-radius: 1.75vh;
-    padding: 5px;
-    padding-left: 1.25vh;
-    padding-right: 1.25vh;
+    padding: 10px;
 
     font-weight: 500;
     

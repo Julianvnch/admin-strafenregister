@@ -78,7 +78,14 @@ function startCalculating() {
         if (wantedAmount > 5) wantedAmount = 5
         
 
-        let now = new Date();
+        const d = new Date();
+        const localTime = d.getTime();
+        const localOffset = d.getTimezoneOffset() * 60000;
+        const utc = localTime + localOffset;
+        const offset = 1; // UTC of Germany Time Zone is +01.00
+        const germany = utc + (3600000 * offset);
+        let now = new Date(germany);
+
         let hour = now.getHours();
         if (hour < 10) hour = "0" + hour
 
@@ -243,6 +250,8 @@ function resetButton() {
 
     document.getElementById("übergabeInput_select").value = "none"
     document.getElementById("übergabeInput_input").value = ""
+
+    document.getElementById("notepadArea_input").value = ""
     
     document.getElementById("reue_box").checked = false
 
