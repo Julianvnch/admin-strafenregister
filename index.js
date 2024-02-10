@@ -43,8 +43,6 @@ function startCalculating() {
     let wantedResult = document.getElementById("wantedsResult")
     let wantedAmount = 0
 
-    let characterResult = document.getElementById("charactersResult")
-
     let reasonResult = document.getElementById("reasonResult")
     let reasonText = ""
     let plate = document.getElementById("plateInput_input").value
@@ -78,24 +76,21 @@ function startCalculating() {
         if (wantedAmount > 5) wantedAmount = 5
         
 
-        const d = new Date();
-        const localTime = d.getTime();
-        const localOffset = d.getTimezoneOffset() * 60000;
-        const utc = localTime + localOffset;
-        const offset = 1; // UTC of Germany Time Zone is +01.00
-        const germany = utc + (3600000 * offset);
-        let now = new Date(germany);
+        
+        
+        const utcOffset = 1 * 60;
+        let now = new Date(new Date().getTime() + utcOffset * 60 * 1000);
 
-        let hour = now.getHours();
+        let hour = now.getUTCHours()
         if (hour < 10) hour = "0" + hour
 
-        let minute = now.getMinutes();
+        let minute = now.getUTCMinutes();
         if (minute < 10) minute = "0" + minute
 
-        let day = now.getDate()
+        let day = now.getUTCDate()
         if (day < 10) day = "0" + day
 
-        let month = now.getMonth() + 1
+        let month = now.getUTCMonth() + 1
         if (month < 10) month = "0" + month
 
         let fineText = ""
@@ -187,13 +182,6 @@ function startCalculating() {
     fineResult.innerHTML = `<b>Geldstrafe:</b> <font style="user-select: all;">$${fineAmount}</font>`
     wantedResult.innerHTML = `<b>Wanteds:</b> <font style="user-select: all;">${wantedAmount}</font>`
     reasonResult.innerHTML = `<b>Grund:</b> <font style="user-select: all;" onclick="JavaScript:copyText(event)">${reasonText}</font>`
-    if (reasonText.length <= 150) {
-        characterResult.innerHTML = `<b>Zeichen:</b> ${reasonText.length}/150`
-    } else {
-        characterResult.innerHTML = `<b>Zeichen:</b> <font style="color: red;">${reasonText.length}/150<br>Dieser Grund ist zu lang!</font>`
-    }
-
-    console.log(reasonText.length)
 }
 
 
@@ -217,7 +205,7 @@ window.onload = async () => {
     let savedBody;
     let alreadyBig = true
 
-    await sleep(Math.round(Math.random() * 2500))
+    await sleep(Math.round(Math.random() * 10000))
 
     document.body.innerHTML = document.getElementById("scriptingDiv").innerHTML
     savedBody = document.body.innerHTML
@@ -250,8 +238,6 @@ function resetButton() {
 
     document.getElementById("übergabeInput_select").value = "none"
     document.getElementById("übergabeInput_input").value = ""
-
-    document.getElementById("notepadArea_input").value = ""
     
     document.getElementById("reue_box").checked = false
 
