@@ -74,6 +74,24 @@ function startCalculating() {
         
         wantedAmount = wantedAmount + fineCollection[i].querySelector(".wantedAmount").querySelectorAll(".selected_extrawanted").length
         if (wantedAmount > 5) wantedAmount = 5
+        
+
+        
+        
+        const utcOffset = 1 * 60;
+        let now = new Date(new Date().getTime() + utcOffset * 60 * 1000);
+
+        let hour = now.getUTCHours()
+        if (hour < 10) hour = "0" + hour
+
+        let minute = now.getUTCMinutes();
+        if (minute < 10) minute = "0" + minute
+
+        let day = now.getUTCDate()
+        if (day < 10) day = "0" + day
+
+        let month = now.getUTCMonth() + 1
+        if (month < 10) month = "0" + month
 
         let fineText = ""
         if (fineCollection[i].querySelector(".fineText").innerHTML.includes("<i>")) {
@@ -84,15 +102,15 @@ function startCalculating() {
 
         if (shortMode) {
             if (reasonText == "") {
-                reasonText = `${day}.${month} ${hour}:${minute} - ${fineCollection[i].querySelector(".paragraph").hasAttribute("data-paragraphAddition") ? fineCollection[i].querySelector(".paragraph").getAttribute("data-paragraphAddition") + " " : ""}${fineCollection[i].querySelector(".paragraph").innerHTML}`
+                reasonText = `${fineCollection[i].querySelector(".paragraph").hasAttribute("data-paragraphAddition") ? fineCollection[i].querySelector(".paragraph").getAttribute("data-paragraphAddition") + " " : ""}${fineCollection[i].querySelector(".paragraph").innerHTML}`
             } else {
                 reasonText += ` + ${fineCollection[i].querySelector(".paragraph").hasAttribute("data-paragraphAddition") ? fineCollection[i].querySelector(".paragraph").getAttribute("data-paragraphAddition") + " " : ""}${fineCollection[i].querySelector(".paragraph").innerHTML}`
             }
         } else {
             if (reasonText == "") {
-                reasonText = `${day}.${month} ${hour}:${minute} - ${fineCollection[i].querySelector(".paragraph").innerHTML} - ${fineText}`
+                reasonText = `${fineCollection[i].querySelector(".paragraph").innerHTML} - ${fineText}`
             } else {
-                reasonText += ` + ${day}.${month} ${hour}:${minute} - ${fineCollection[i].querySelector(".paragraph").innerHTML} - ${fineText}`
+                reasonText += `${fineCollection[i].querySelector(".paragraph").innerHTML} - ${fineText}`
             }
         }
 
