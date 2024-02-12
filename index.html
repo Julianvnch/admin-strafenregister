@@ -727,9 +727,9 @@
 
         <div id="results">
             <div id="resultsTitle">Ergebnis</div>
-            <div id="infoTitle"><i>Indem man die grauen Wanteds anklickt kann man auswählen ob diese hinzugefügt werden.</i></div>
-            <div class="result" id="fineResult"><b>Geldstrafe:</b> $0</div>
-            <div class="result" id="wantedsResult"><b>Wanteds:</b> 0</div>
+            <div id="infoTitle"><i>Indem man die grauen Sterne anklickt kann man auswählen ob diese hinzugefügt werden.</i></div>
+            <div class="result" id="fineResult"><b>Länge:</b> $0</div>
+            <div class="result" id="wantedsResult"><b>WaffenC:</b> 0</div>
             <div class="result" id="reasonResult"><b>Grund:</b></div>
             <div class="result" id="infoResult"><b>Information:</b></div>
 
@@ -738,38 +738,38 @@
                 <label style="line-height: 25px;" for="checkbox_box">Kurzer Grund</label>
             </div>
 
-            <div id="plateInput"><input id="plateInput_input" type="text" maxlength="8" placeholder="Kennzeichen" oninput="JavaScript:startCalculating()"></div>
-            <div id="blitzerInput"><input id="blitzerInput_input" type="text" maxlength="64" placeholder="Blitzerort" oninput="JavaScript:startCalculating()"></div>
-            <div id="systemwantedsInput"><input id="systemwantedsInput_input" type="text" maxlength="1" placeholder="Systemwanteds" oninput="JavaScript:startCalculating()"></div>
+            <div id="plateInput"><input id="plateInput_input" type="text" maxlength="8" placeholder="Platzhalter" oninput="JavaScript:startCalculating()"></div>
+            <div id="blitzerInput"><input id="blitzerInput_input" type="text" maxlength="64" placeholder="Platzhalter" oninput="JavaScript:startCalculating()"></div>
+            <div id="systemwantedsInput"><input id="systemwantedsInput_input" type="text" maxlength="1" placeholder="Platzhalter" oninput="JavaScript:startCalculating()"></div>
             
             <div id="übergabeInput">
                 <select name="" id="übergabeInput_select" onchange="JavaScript:startCalculating()">
-                    <option value="none">TV-Abtransport auswählen</option>
-                    <option value="lspd">Los Santos Police Department</option>
-                    <option value="sahp">San Andreas Highway Patrol</option>
-                    <option value="ng">National Guard</option>
-                    <option value="usss">United States Secret Service</option>
-                    <option value="fib">Federal Investigation Bureau</option>
+                    <option value="none">Platzhalter</option>
+                    <option value="lspd">Soon</option>
+                    <option value="sahp">Soon</option>
+                    <option value="ng">Soon</option>
+                    <option value="usss">Soon</option>
+                    <option value="fib">Soon</option>
                 </select>
                 <input id="übergabeInput_input" type="text" oninput="JavaScript:startCalculating()" placeholder="TV-Abtransport Beauftrager">
             </div>
 
-            <div id="reue">
-                <input id="reue_box" onchange="JavaScript:startCalculating()" type="checkbox" name="">
-                <label for="reue_box"><font id="checkboxfont1" style="line-height: 25px;">Reue</font><br><font style="font-size: 15px; font-weight: 400;">(Entfernt 2 Wanteds, 1 Wanted muss verbleiben gemäß StBG §35 - Reue)</font></label>
+            <div id="Änderung">
+                <input id="Änderung" onchange="JavaScript:startCalculating()" type="checkbox" name="">
+                <label for="Änderung"><font id="checkboxfont1" style="line-height: 25px;">Änderung</font><br><font style="font-size: 15px; font-weight: 400;"> Fügt hinten das Wort Änderung an </font></label>
             </div>
 
-            <button id="showButton" onclick="JavaScript:showFines()">Bußgelder anzeigen</button>
+            <button id="showButton" onclick="JavaScript:showFines()">Strafen anzeigen</button>
 
             <button id="resetButton" onclick="JavaScript:resetButton()">Zurücksetzen</button>
         </div>
 
         <div id="finesListContainer" style="pointer-events: none;">
-            <div id="finesListContainer_title">Auflistung der zu vergebenen Geldstrafen</div>
+            <div id="finesListContainer_title">Auflistung der zu vergebenen Strafe</div>
             <table id="finesListTable">
                 <tr>
-                    <th style="width: 80%;">Grund für die Geldstrafe</th>
-                    <th style="width: 20%;">Bußgeld</th>
+                    <th style="width: 80%;">Grund</th>
+                    <th style="width: 20%;">Länge</th>
                 </tr>
 
             </table>
