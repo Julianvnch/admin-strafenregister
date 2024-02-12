@@ -6,15 +6,15 @@
 	<meta http-equiv="Pragma" content="no-cache" />
 	<meta http-equiv="Expires" content="0" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bußgeldrechner LSPD-DE01</title>
+    <title>Admin DE1</title>
     <script src="index.js"></script>
     <link rel="stylesheet" href="fonts.css">
     <link rel="stylesheet" href="style.css">
-    <link rel="shortcut icon" href="lspd_logo.png?" sizes="32x32" type="image/png">
-    <meta content="Bußgeldrechner DE 01" property="og:title" />
-    <meta content="Bußgeldrechner für GrandRP DE 01 - Made by Joshi Enrage edited by Julian Usless" property="og:description" />
+    <link rel="shortcut icon" href="SAHP_logo.png" sizes="32x32" type="image/png">
+    <meta content="Admin DE 01" property="og:title" />
+    <meta content="Admin für GrandRP DE 01 - Made by Julian Usless" property="og:description" />
     <meta content="https://sbg.grand-lspd.de" property="og:url" />
-    <meta content="https://sbg.grand-lspd.de/lspd_logo.png" property="og:image" />
+    <meta content="https://sbg.grand-lspd.de/SAHP_logo" property="og:image" />
     <meta content="#b2ff65" data-react-helmet="true" name="theme-color" />
 
     <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v6.2.1/css/pro.min.css">
@@ -36,13 +36,13 @@
         <div id="disclaimerBackgroundBlocker"></div>
     <div id="disclaimer">
         <div id="disclaimer_title"><i id="disclaimer_title_warning" class="fa-regular fa-triangle-exclamation" style="color: rgb(255, 73, 73);"></i> HINWEIS</div>
-        <div id="disclaimer_text">Der Bußgeldrechner wird von Julian Usless so aktuell wie möglich gehalten.<br>Solltet ihr Fehler oder falsche Daten finden, meldet das bitte bei Julian Usless!</div>
+        <div id="disclaimer_text">Der Strafrechner wird von Julian Usless so aktuell wie möglich gehalten.<br>Solltet ihr Fehler oder falsche Daten finden, meldet das bitte bei Julian Usless! / dc:julianvnch </div>
         <button id="disclaimer_button" onclick="JavaScript:disclaimerAccepted()">Einverstanden</button>
     </div>
 
     <div id="header">
         <div id="title">Bußgeldrechner</div>
-        <div id="credits">Made by Joshi Enrage edited by Julian Usless</div>
+        <div id="credits">Made by Julian Usless</div>
         <div id="searchbar"><input id="searchbar_input" oninput="JavaScript:searchFine()" type="text" placeholder="Nach einer Straftat suchen"></div>
     </div>
 
@@ -52,8 +52,8 @@
                 <tr id="finesHeader">
                     <th style="width: 15%;">Paragraph</th>
                     <th style="width: 55%;">Strafbestand</th>
-                    <th style="width: 15%;">Waffen Enternen</th>
-                    <th style="width: 15%;">Minuten</th>
+                    <th style="width: 15%;">Waffen Clear</th>
+                    <th style="width: 15%;">Minuten/Tage</th>
                 </tr>
                 <tr class="categoryHeader">
                     <th></th>
@@ -63,25 +63,25 @@
                     <td class="paragraph">1.1</td>
                     <td class="fineText">Der erstellte Account ist Eigentum des Erstellers. Der Account darf nicht geteilt oder verkauft werden.</td>
                     <td class="wantedAmount" data-wantedamount="1"></td>
-                    <td class="fineAmount" data-fineamount="10000">9999 Tage</td>
+                    <td class="fineAmount" data-fineamount="9999">9999 Tage</td>
                 </tr>
                 <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
                     <td class="paragraph">1.3</td>
                     <td class="fineText">Jeder Betrug gegenüber anderen Spielern ist verboten.</td>
                     <td class="wantedAmount" data-wantedamount="1"></td>
-                    <td class="fineAmount" data-fineamount="8000">9999 Tage</td>
+                    <td class="fineAmount" data-fineamount="9999">9999 Tage</td>
                 </tr>
                 <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="true" data-removeweaponlicence="false">
                     <td class="paragraph">1.4</td>
                     <td class="fineText">Es ist verboten, mehr als ein zusätzlichen Account zu haben (Twinking)</td>
                     <td class="wantedAmount" data-wantedamount="0"></td>
-                    <td class="fineAmount" data-fineamount="5000">60 Tage Main / andere 9999 Tage</td>
+                    <td class="fineAmount" data-fineamount="60/9999">60 Tage Main / andere 9999 Tage</td>
                 </tr>
                 <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
                     <td class="paragraph">1.5</td>
                     <td class="fineText">Es ist verboten, mehr als 1 Unternehmen zu haben, einschließlich zusätzlicher Konten. 1 Person - 1 Unternehmen.</td>
                     <td class="wantedAmount" data-wantedamount="0"></td>
-                    <td class="fineAmount" data-fineamount="2000">30 Tagen</td>
+                    <td class="fineAmount" data-fineamount="30">30 Days</td>
                 </tr>
                 <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
                     <td class="paragraph">StVO §7</td>
@@ -727,9 +727,9 @@
 
         <div id="results">
             <div id="resultsTitle">Ergebnis</div>
-            <div id="infoTitle"><i>Indem man die grauen Wanteds anklickt kann man auswählen ob diese hinzugefügt werden.</i></div>
-            <div class="result" id="fineResult"><b>Geldstrafe:</b> $0</div>
-            <div class="result" id="wantedsResult"><b>Wanteds:</b> 0</div>
+            <div id="infoTitle"><i>Indem man die grauen Steren anklickt kann man auswählen ob diese hinzugefügt werden.</i></div>
+            <div class="result" id="fineResult"><b>Länge:</b> $0</div>
+            <div class="result" id="wantedsResult"><b>Waffen:</b> 0</div>
             <div class="result" id="reasonResult"><b>Grund:</b></div>
             <div class="result" id="infoResult"><b>Information:</b></div>
 
@@ -738,38 +738,19 @@
                 <label style="line-height: 25px;" for="checkbox_box">Kurzer Grund</label>
             </div>
 
-            <div id="plateInput"><input id="plateInput_input" type="text" maxlength="8" placeholder="Kennzeichen" oninput="JavaScript:startCalculating()"></div>
-            <div id="blitzerInput"><input id="blitzerInput_input" type="text" maxlength="64" placeholder="Blitzerort" oninput="JavaScript:startCalculating()"></div>
-            <div id="systemwantedsInput"><input id="systemwantedsInput_input" type="text" maxlength="1" placeholder="Systemwanteds" oninput="JavaScript:startCalculating()"></div>
-            
-            <div id="übergabeInput">
-                <select name="" id="übergabeInput_select" onchange="JavaScript:startCalculating()">
-                    <option value="none">TV-Abtransport auswählen</option>
-                    <option value="lspd">Los Santos Police Department</option>
-                    <option value="sahp">San Andreas Highway Patrol</option>
-                    <option value="ng">National Guard</option>
-                    <option value="usss">United States Secret Service</option>
-                    <option value="fib">Federal Investigation Bureau</option>
-                </select>
-                <input id="übergabeInput_input" type="text" oninput="JavaScript:startCalculating()" placeholder="TV-Abtransport Beauftrager">
-            </div>
+            <div id="blitzerInput"><input id="blitzerInput_input" type="text" maxlength="64" placeholder="Auftrag" oninput="JavaScript:startCalculating()"></div>
 
-            <div id="reue">
-                <input id="reue_box" onchange="JavaScript:startCalculating()" type="checkbox" name="">
-                <label for="reue_box"><font id="checkboxfont1" style="line-height: 25px;">Reue</font><br><font style="font-size: 15px; font-weight: 400;">(Entfernt 2 Wanteds, 1 Wanted muss verbleiben gemäß StBG §35 - Reue)</font></label>
-            </div>
-
-            <button id="showButton" onclick="JavaScript:showFines()">Bußgelder anzeigen</button>
+            <button id="showButton" onclick="JavaScript:showFines()">Strafen anzeigen</button>
 
             <button id="resetButton" onclick="JavaScript:resetButton()">Zurücksetzen</button>
         </div>
 
         <div id="finesListContainer" style="pointer-events: none;">
-            <div id="finesListContainer_title">Auflistung der zu vergebenen Geldstrafen</div>
+            <div id="finesListContainer_title">Auflistung der zu vergebenen Strafen</div>
             <table id="finesListTable">
                 <tr>
-                    <th style="width: 80%;">Grund für die Geldstrafe</th>
-                    <th style="width: 20%;">Bußgeld</th>
+                    <th style="width: 80%;">Grund</th>
+                    <th style="width: 20%;">Länge</th>
                 </tr>
 
             </table>
