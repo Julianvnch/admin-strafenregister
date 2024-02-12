@@ -13,8 +13,8 @@
     <link rel="shortcut icon" href="SAHP_logo.png" sizes="32x32" type="image/png">
     <meta content="Admin DE 01" property="og:title" />
     <meta content="Admin für GrandRP DE 01 - Made by Julian Usless" property="og:description" />
-    <meta content="https://sbg.grand-lspd.de" property="og:url" />
-    <meta content="https://sbg.grand-lspd.de/lspd_logo.png" property="og:image" />
+    <meta content="https://github.com/Julianvnch/admin-strafenregister" property="og:url" />
+    <meta content="https://github.com/Julianvnch/admin-strafenregister/DOJ_logo.jpg" property="og:image" />
     <meta content="#b2ff65" data-react-helmet="true" name="theme-color" />
 
     <link rel="stylesheet" href="https://kit-pro.fontawesome.com/releases/v6.2.1/css/pro.min.css">
@@ -41,7 +41,7 @@
     </div>
 
     <div id="header">
-        <div id="title">Bußgeldrechner</div>
+        <div id="title">Admin DE1 Regelverstöße</div>
         <div id="credits">Made by Julian Usless</div>
         <div id="searchbar"><input id="searchbar_input" oninput="JavaScript:searchFine()" type="text" placeholder="Nach einer Straftat suchen"></div>
     </div>
@@ -75,7 +75,7 @@
                     <td class="paragraph">1.4</td>
                     <td class="fineText">Es ist verboten, mehr als ein zusätzlichen Account zu haben (Twinking)</td>
                     <td class="wantedAmount" data-wantedamount="0"></td>
-                    <td class="fineAmount" data-fineamount="60/9999">60 Tage Main / andere 9999 Tage</td>
+                    <td class="fineAmount" data-fineamount="60">60 Tage Main/zusätzlich 9999 Tage</td>
                 </tr>
                 <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
                     <td class="paragraph">1.5</td>
@@ -84,22 +84,16 @@
                     <td class="fineAmount" data-fineamount="30">30 Days</td>
                 </tr>
                 <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
-                    <td class="paragraph">StVO §7</td>
-                    <td class="fineText">Fahren ohne Licht (Dunkelheit, Wetterverhältnissen)</td>
-                    <td class="wantedAmount" data-wantedamount="0"></td>
-                    <td class="fineAmount" data-fineamount="5000">$5.000</td>
-                </tr>
-                <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
                     <td class="paragraph">2.1</td>
-                    <td class="fineText">Die Ingamenamen müssen realistische Namen sein. Der Name muss sich auf die reale Welt beziehen und Namen berühmter Personen/beleidigen/Anspielung dürfen nicht verwendet werden. Beispiel: Max Mustermann</td>
+                    <td class="fineText">Die Ingamenamen müssen realistische Namen sein. Beispiel: Max Mustermann</td>
                     <td class="wantedAmount" data-wantedamount="0"></td>
-                    <td class="fineAmount" data-fineamount="Jail 10 Minuten und Name ändern">Jail 10 Minuten und Name ändern</td>
+                    <td class="fineAmount" data-fineamount="10">Jail 10 Minuten und Name ändern</td>
                 </tr>
                 <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
                     <td class="paragraph">3.1</td>
                     <td class="fineText">OOC Beleidigungen sind untersagt</td>
                     <td class="wantedAmount" data-wantedamount="0"></td>
-                    <td class="fineAmount" data-fineamount="Mute 180 Minuten / Bann 1-7 Tage">Mute 180 Minuten / Bann 1-7 Tage</td>
+                    <td class="fineAmount" data-fineamount="Mute180Min/Bann1-7Tage">Mute 180 Minuten / Bann 1-7 Tage</td>
                 </tr>
                 <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
                     <td class="paragraph">3.2</td>
@@ -109,7 +103,7 @@
                 </tr>
                 <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
                     <td class="paragraph">3.3</td>
-                    <td class="fineText">Alle Spieler müssen in der Lage sein sich auf Deutsch zu verständigen und IC-Chats dürfen nur auf Deutsch sein. (Andere Sprachen dürfen nur im Privaten verwendet werden, wenn alle Beteiligten zustimmen)</td>
+                    <td class="fineText">Alle Spieler müssen in der Lage sein sich auf Deutsch zu verständigen und IC-Chats dürfen nur auf Deutsch sein.</td>
                     <td class="wantedAmount" data-wantedamount="0"></td>
                     <td class="fineAmount" data-fineamount="Mute 120 Minuten">Mute 120 Minuten</td>
                 </tr>
@@ -117,7 +111,7 @@
                     <td class="paragraph">4.1</td>
                     <td class="fineText">Spieler dürfen keine externe Software benutzen, die einem einen Vorteil verschaffen (Deaktivierung von Drogeneffekten, Hacks, Bots usw.).</td>
                     <td class="wantedAmount" data-wantedamount="0"></td>
-                    <td class="fineAmount" data-fineamount="Bann 60 Tage">Bann 60 Tage</td>
+                    <td class="fineAmount" data-fineamount="Bann 60 Tage">60 Tage</td>
                 </tr>
                 <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
                     <td class="paragraph">5.1</td>
@@ -127,7 +121,7 @@
                 </tr>
                 <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
                     <td class="paragraph">5.2</td>
-                    <td class="fineText">Alle Spieler müssen sich angemessen Verhalten im Gespräch mit der Administration. Im Falle einer Meinungsverschiedenheit bezüglich einer Entscheidung der Administration - steht es einem offen, eine Adminbeschwerde einzureichen, welche vom Chief Administrator bearbeitet wird.</td>
+                    <td class="fineText">Alle Spieler müssen sich angemessen Verhalten im Gespräch mit der Administration.</td>
                     <td class="wantedAmount" data-wantedamount="0"></td>
                     <td class="fineAmount" data-fineamount="">Nicht spezifiziert</td>
                 </tr>
@@ -135,11 +129,11 @@
                     <td class="paragraph">5.3</td>
                     <td class="fineText">Beleidigungen an die Administration sind verboten. Eine Beschwerde ist der beste Weg um Gerechtigkeit zu erlangen.</td>
                     <td class="wantedAmount" data-wantedamount="0"></td>
-                    <td class="fineAmount" data-fineamount="Bann 7 Tage">Bann 7 Tage</td>
+                    <td class="fineAmount" data-fineamount="7 Tage">Bann 7 Tage</td>
                 </tr>
                 <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
                     <td class="paragraph">6.1</td>
-                    <td class="fineText">Die falsche Verwendung der /me /do /try /todo - Befehle ist verboten. Der Spieler ist verpflichtet die Wahrheit auszuspielen. Anmerkung: /try kann nur 2 mal pro Situation verwendet werden.</td>
+                    <td class="fineText">Die falsche Verwendung der /me /do /try /todo - Befehle ist verboten. Anmerkung: /try kann nur 2 mal pro Situation verwendet werden.</td>
                     <td class="wantedAmount" data-wantedamount="0"></td>
                     <td class="fineAmount" data-fineamount="">Nicht spezifiziert</td>
                 </tr>
@@ -151,8 +145,7 @@
                 </tr>
                 <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
                     <td class="paragraph">6.3</td>
-                    <td class="fineText">Es ist verboten, das Lager von Familien/Organisationen
-                        für persönliche Zwecke zu leeren.
+                    <td class="fineText">Es ist verboten, das Lager von Familien/Organisationen für persönliche Zwecke zu leeren.</td>
                         <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
                             <td class="paragraph">6.4</td>
                             <td class="fineText">Es ist verboten, einen Bad-Angestellten der staatlichen Organisationen zu spielen, ohne eine RP-Biographie zu haben</td>
@@ -327,7 +320,7 @@
                 </tr>
                 <tr class="showing fine" onclick="JavaScript:selectFine(event)">
                     <td class="paragraph">1.5</td>
-                    <td class="fineText">Mitarbeiter des LSPD’s haben das Recht, ein Auto zu durchsuchen. Wenn sie illegalen Waffen oder Drogen finden, haben sie das Recht, diese zu beschlagnahmen. All dies sollte auf Video gespeichert sein.</td>
+                    <td class="fineText">Mitarbeiter des LSPDs haben das Recht, ein Auto zu durchsuchen. Wenn sie illegalen Waffen oder Drogen finden, haben sie das Recht, diese zu beschlagnahmen. All dies sollte auf Video gespeichert sein.</td>
                     <td class="wantedAmount" data-wantedamount="0"></td>
                     <td class="fineAmount" data-fineamount="Mündlicher Warn">Mündlicher Warn</td>
                 </tr>
@@ -946,30 +939,6 @@
                     <td class="wantedAmount" data-wantedamount="1">⭐<font class="extrawanted1 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font></td>
                     <td class="fineAmount" data-fineamount="10000">$10.000 pro ⭐</td>
                 </tr>
-                <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="true">
-                    <td class="paragraph">WaffG §5.1</td>
-                    <td class="fineText">Besitz lllegaler Waffen </td>
-                    <td class="wantedAmount" data-wantedamount="2">⭐⭐<font class="extrawanted1 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font></td>
-                    <td class="fineAmount" data-fineamount="20000">$10.000 pro ⭐</td>
-                </tr>
-                <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="true">
-                    <td class="paragraph">WaffG §8.1</td>
-                    <td class="fineText">Offenes Tragen einer Waffe</td>
-                    <td class="wantedAmount" data-wantedamount="0"><font class="extrawanted1 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="5000">☆</font></td>
-                    <td class="fineAmount" data-fineamount="5000">$5.000 + $5.000 pro weiteren ⭐</td>
-                </tr>
-                <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="true">
-                    <td class="paragraph">WaffG §8.2</td>
-                    <td class="fineText">Tragen einer Waffe in staatl. Einrichtungen</td>
-                    <td class="wantedAmount" data-wantedamount="0"><font class="extrawanted1 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="0">☆</font></td>
-                    <td class="fineAmount" data-fineamount="5000">$5.000</td>
-                </tr>
-                <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="true">
-                    <td class="paragraph">WaffG §11</td>
-                    <td class="fineText">Ungesetzlicher Waffenhandel (An- & Verkauf)</td>
-                    <td class="wantedAmount" data-wantedamount="3">⭐⭐⭐</td>
-                    <td class="fineAmount" data-fineamount="25000">$25.000</td>
-                </tr>
                 <tr class="categoryHeader">
                     <th></th>
                     <th>Sperrzonen / Absperrungen / Kapitalverbrechen (StGB)</th>
@@ -979,36 +948,6 @@
                     <td class="fineText">Durchbrechen von Absperrungen</td>
                     <td class="wantedAmount" data-wantedamount="1">⭐<font class="extrawanted1 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="0">☆</font></td>
                     <td class="fineAmount" data-fineamount="15000">$15.000</td>
-                </tr>
-                <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
-                    <td class="paragraph">StGB §18</td>
-                    <td class="fineText">Unerlaubtes Betreten von Sperrzonen</td>
-                    <td class="wantedAmount" data-wantedamount="2">⭐⭐<font class="extrawanted1 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="0">☆</font></td>
-                    <td class="fineAmount" data-fineamount="25000">$25.000</td>
-                </tr>
-                <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
-                    <td class="paragraph">StGB §18</td>
-                    <td class="fineText">Unerlaubtes Betreten eines millitärischen Geländes</td>
-                    <td class="wantedAmount" data-wantedamount="5">⭐⭐⭐⭐⭐</td>
-                    <td class="fineAmount" data-fineamount="50000">$50.000</td>
-                </tr>
-                <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
-                    <td class="paragraph">StGB §18.1</td>
-                    <td class="fineText">Unerlaubtes Betreten von Militärischen-Sperrzone</td>
-                    <td class="wantedAmount" data-wantedamount="2">⭐⭐<font class="extrawanted1 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="0">☆</font></td>
-                    <td class="fineAmount" data-fineamount="25000">$25.000</td>
-                </tr>
-                <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="true" data-removeweaponlicence="false">
-                    <td class="paragraph">StGB §18.1</td>
-                    <td class="fineText">Unerlaubtes Befahren von Sperrzonen</td>
-                    <td class="wantedAmount" data-wantedamount="2">⭐⭐<font class="extrawanted1 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="0">☆</font></td>
-                    <td class="fineAmount" data-fineamount="25000">$25.000</td>
-                </tr>
-                <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
-                    <td class="paragraph">StGB §25</td>
-                    <td class="fineText">Terrorismus (Deckt alle Strafen ab)</td>
-                    <td class="wantedAmount" data-wantedamount="3">⭐⭐⭐</td>
-                    <td class="fineAmount" data-fineamount="25000">$25.000</td>
                 </tr>
                 <tr class="categoryHeader">
                     <th></th>
@@ -1020,48 +959,6 @@
                     <td class="wantedAmount" data-wantedamount="0"><font class="extrawanted1 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="0">☆</font></td>
                     <td class="fineAmount" data-fineamount="5000">$5.000</td>
                 </tr>
-                <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
-                    <td class="paragraph">BtMG §2.1</td>
-                    <td class="fineText">Drogenbesitz Mittel ab 6 - 20<br><i>Gilt nicht für Cannabis</i></td>
-                    <td class="wantedAmount" data-wantedamount="1">⭐</td>
-                    <td class="fineAmount" data-fineamount="10000">$10.000</td>
-                </tr>
-                <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
-                    <td class="paragraph">BtMG §2.1</td>
-                    <td class="fineText">Drogenbesitz Groß 20+</td>
-                    <td class="wantedAmount" data-wantedamount="2">⭐⭐</td>
-                    <td class="fineAmount" data-fineamount="20000">$20.000</td>
-                </tr>
-                <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
-                    <td class="paragraph">BtMG §2.1</td>
-                    <td class="fineText">Drogenhandel (An- & Verkauf)</td>
-                    <td class="wantedAmount" data-wantedamount="3">⭐⭐⭐</td>
-                    <td class="fineAmount" data-fineamount="30000">$30.000</td>
-                </tr>
-                <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
-                    <td class="paragraph">BtMG §2.1</td>
-                    <td class="fineText">Drogen Herstellung</td>
-                    <td class="wantedAmount" data-wantedamount="3">⭐⭐⭐</td>
-                    <td class="fineAmount" data-fineamount="30000">$30.000</td>
-                </tr>
-                <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
-                    <td class="paragraph">BtMG §3</td>
-                    <td class="fineText">Verkauf von Medizinprodukten bis 20 Medizinischen Gegenständen</td>
-                    <td class="wantedAmount" data-wantedamount="1">⭐</td>
-                    <td class="fineAmount" data-fineamount="10000">$10.000</td>
-                </tr>
-                <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
-                    <td class="paragraph">BtMG §3</td>
-                    <td class="fineText">Verkauf von Medizinprodukten bis 50 Medizinischen Gegenständen</td>
-                    <td class="wantedAmount" data-wantedamount="1">⭐<font class="extrawanted1 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="0">☆</font></td>
-                    <td class="fineAmount" data-fineamount="20000">$20.000</td>
-                </tr>
-                <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
-                    <td class="paragraph">BtMG §3</td>
-                    <td class="fineText">Verkauf von Medizinprodukten ab 51 Medizinischen Gegenständen</td>
-                    <td class="wantedAmount" data-wantedamount="1">⭐<font class="extrawanted1 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="0">☆</font><font class="extrawanted2 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="0">☆</font></td>
-                    <td class="fineAmount" data-fineamount="25000">$25.000</td>
-                </tr>
                 <tr class="categoryHeader">
                     <th></th>
                     <th>Beamtendienstgesetzbuch (BDG)</th>
@@ -1069,72 +966,6 @@
                 <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
                     <td class="paragraph">BDG §2</td>
                     <td class="fineText">Verhaltenskodex</td>
-                    <td class="wantedAmount" data-wantedamount="0"><font class="extrawanted1 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted2 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted3 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted4 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted5 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font></td>
-                    <td class="fineAmount" data-fineamount="0">max. $50.000</td>
-                </tr>
-                <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
-                    <td class="paragraph">BDG §3</td>
-                    <td class="fineText">Dienstpflichten des Beamten</td>
-                    <td class="wantedAmount" data-wantedamount="0"><font class="extrawanted1 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted2 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted3 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted4 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted5 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font></td>
-                    <td class="fineAmount" data-fineamount="0">max. $50.000</td>
-                </tr>
-                <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
-                    <td class="paragraph">BDG §7</td>
-                    <td class="fineText">Bestechung</td>
-                    <td class="wantedAmount" data-wantedamount="0"><font class="extrawanted1 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted2 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted3 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted4 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted5 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font></td>
-                    <td class="fineAmount" data-fineamount="0">max. $50.000</td>
-                </tr>
-                <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
-                    <td class="paragraph">BDG §8</td>
-                    <td class="fineText">Vorteilsnahme & Vorteilsgewährung</td>
-                    <td class="wantedAmount" data-wantedamount="0"><font class="extrawanted1 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted2 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted3 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted4 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted5 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font></td>
-                    <td class="fineAmount" data-fineamount="0">max. $50.000</td>
-                </tr>
-                <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
-                    <td class="paragraph">BDG §9</td>
-                    <td class="fineText">Verleitung eines Untergebenen/Kollegen zur Straftat</td>
-                    <td class="wantedAmount" data-wantedamount="0"><font class="extrawanted1 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted2 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted3 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted4 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted5 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font></td>
-                    <td class="fineAmount" data-fineamount="0">max. $50.000</td>
-                </tr>
-                <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
-                    <td class="paragraph">BDG §10</td>
-                    <td class="fineText">Unterlassen der Diensthandlung</td>
-                    <td class="wantedAmount" data-wantedamount="0"><font class="extrawanted1 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted2 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted3 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted4 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted5 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font></td>
-                    <td class="fineAmount" data-fineamount="0">max. $50.000</td>
-                </tr>
-                <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
-                    <td class="paragraph">BDG §11</td>
-                    <td class="fineText">Falschbeurkundung im Amt</td>
-                    <td class="wantedAmount" data-wantedamount="0"><font class="extrawanted1 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted2 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted3 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted4 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted5 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font></td>
-                    <td class="fineAmount" data-fineamount="0">max. $50.000</td>
-                </tr>
-                <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
-                    <td class="paragraph">StGB §40</td>
-                    <td class="fineText">Weitergabe von Staatseigentum</td>
-                    <td class="wantedAmount" data-wantedamount="0"><font class="extrawanted1 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted2 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted3 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted4 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted5 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font></td>
-                    <td class="fineAmount" data-fineamount="0">max. $50.000</td>
-                </tr>
-                <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
-                    <td class="paragraph">BDG §13</td>
-                    <td class="fineText">Hochverrat im öffentlichen Dienst</td>
-                    <td class="wantedAmount" data-wantedamount="0"><font class="extrawanted1 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted2 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted3 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted4 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted5 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font></td>
-                    <td class="fineAmount" data-fineamount="0">max. $50.000</td>
-                </tr>
-                <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
-                    <td class="paragraph">BDG §14</td>
-                    <td class="fineText">Umgehung von Strafprozessen</td>
-                    <td class="wantedAmount" data-wantedamount="0"><font class="extrawanted1 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted2 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted3 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted4 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted5 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font></td>
-                    <td class="fineAmount" data-fineamount="0">max. $50.000</td>
-                </tr>
-                <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
-                    <td class="paragraph">BDG §15</td>
-                    <td class="fineText">Verschwörung</td>
-                    <td class="wantedAmount" data-wantedamount="0"><font class="extrawanted1 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted2 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted3 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted4 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted5 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font></td>
-                    <td class="fineAmount" data-fineamount="0">max. $50.000</td>
-                </tr>
-                <tr class="showing fine" onclick="JavaScript:selectFine(event)" data-removedriverlicence="false" data-removeweaponlicence="false">
-                    <td class="paragraph">BDG §16</td>
-                    <td class="fineText">Schmuggel</td>
                     <td class="wantedAmount" data-wantedamount="0"><font class="extrawanted1 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted2 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted3 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted4 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font><font class="extrawanted5 extrawanted" onclick="JavaScript:toggleExtraWanted(event)" data-addedfine="10000">☆</font></td>
                     <td class="fineAmount" data-fineamount="0">max. $50.000</td>
                 </tr>
